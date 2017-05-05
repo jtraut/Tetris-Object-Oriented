@@ -1,0 +1,46 @@
+
+public class Tetromino implements Piece {
+	public boolean completeRow;
+	public Object pieceGraphics;
+	
+	//ideas from Flyweight tutorials 
+	private String color;
+	private char letter;
+	//private int theta;
+	
+	//have 1 concrete class for Tetrominos
+	public Tetromino(char letter) {
+		this.letter = letter;
+		//should there be ifs for each type of piece creation?
+		if(letter == 'I'){
+			this.color = "Cyan";
+			
+		}
+	}
+	
+	public boolean checkBorder(Piece piece){
+		return false;
+	}
+	public void movePiece(int x, int y) {
+		
+	}
+	public void rotatePiece(int theta) {
+		
+	}
+	public boolean pausePiece(Piece piece) {
+		return true;
+	}
+	public boolean makeStationary(Piece piece) {
+		return true;
+	}
+	
+	public void attach(Observer o) {
+		
+	}
+	public void detach(Observer o) {
+		
+	}
+	public void notifyObserver() {
+		
+	}
+}

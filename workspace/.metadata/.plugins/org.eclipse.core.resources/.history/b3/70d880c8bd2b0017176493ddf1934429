@@ -1,0 +1,49 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Game extends JPanel{
+	public int timer;
+	public String currentPlayer;
+	public int[] currentPieces;
+	public int score;
+	public final int windowHeight = 30;
+	public final int windowWidth = 10;
+	public boolean[][] border = new boolean[30][10]; 
+	
+	public void startTimer(int timer)
+	{
+		
+	}
+	
+	public void stopTimer(int timer)
+	{
+		
+	}
+	
+	public void displayPauseMenu(boolean pressedPause)
+	{
+		
+	}
+	
+	public void hidePauseMenu(boolean endPause)
+	{
+		
+	}
+	
+	public int endGame(boolean gameOver)
+	{
+		return 1;
+	}
+	
+	public int initializeScore()
+	{
+		//or nah
+		return 1;
+	}
+	
+	public Piece showNextPiece()
+	{
+		return piece;
+	}
+	
+}

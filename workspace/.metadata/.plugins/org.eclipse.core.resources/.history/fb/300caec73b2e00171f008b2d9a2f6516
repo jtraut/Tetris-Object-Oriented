@@ -1,0 +1,11 @@
+import java.awt.Color;
+import java.awt.Point;
+
+public interface Piece {
+	
+	public int minX();
+	public int minY();
+	public Tetromino rotatePiece();
+	
+
+}

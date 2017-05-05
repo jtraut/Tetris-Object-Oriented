@@ -1,0 +1,7 @@
+public interface Piece {
+	
+	public int minX();
+	public int minY();
+	public Tetromino rotatePiece();
+
+}

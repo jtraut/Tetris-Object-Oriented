@@ -1,0 +1,51 @@
+//import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import java.util.ArrayList;
+
+import javax.swing.Timer;
+
+public class KeyStrokes extends JPanel implements ActionListener {
+	
+	private static final long serialVersionUID = 1L;	
+	
+	private ArrayList<Observer> observers = new ArrayList<Observer>();
+
+	public KeyStrokes() {
+		Timer timer = new Timer(400, this);
+		timer.start();
+		addKeyListener(new KeyListener());
+		System.out.println("Adding key listener");
+	}
+
+	public void attach(Observer o) {
+		System.out.println("Adding new observer");
+		observers.add(o);
+	}
+	
+	public void detach(Observer o) {
+		observers.remove(o);
+	}
+	
+	protected void notifyObserver(KeyEvent key) {
+		for (Observer o : observers) {
+			o.onKeyStroke(key);
+		}
+		//this.observers.forEach(observer -> observer.onKeyStroke(key);
+	}	
+
+	
+	class KeyListener extends KeyAdapter {
+		public void keyPressed(KeyEvent key) {
+			System.out.println("Key stroke detected");	
+			if (key.getKeyChar() == 'p') {
+				System.out.println("P");
+			}
+			notifyObserver(key);
+			
+		}
+	}
+}

@@ -1,0 +1,14 @@
+
+public class PieceFactory {
+	private boolean[][] pieceList = new boolean[4][4];
+	
+	
+	
+	public void getPiece() {
+		//select a random piece from list
+		
+		//rotate the piece randomly 0-3 times
+		
+		//return piece and orientation
+	}
+}

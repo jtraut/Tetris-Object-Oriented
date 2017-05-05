@@ -1,0 +1,57 @@
+public class PieceClient {
+	/*
+	 * Just realized, I think the grid is the piece client
+	 * Its the class making all the requests for new pieces 
+	 */
+	public boolean isStationary;
+	public boolean isActive;
+	private int currentRotation;
+	
+	private static final String letters[] = {"I", "J", "L", "O", "S", "T", "Z"};
+	
+	public int getCurrentX() {
+		return currentX;
+	}
+
+	public void setCurrentX(int currentX) {
+		this.currentX = currentX;
+	}
+	
+	public int getCurrentY() {
+		return currentY;
+	}
+
+	public void setCurrentY(int currentY) {
+		this.currentY = currentY;
+	}
+	
+	//while game on
+		//Tetrominos tetrominos = (Tetrominos)PieceFactory.getPiece(getRandomLetter());
+		//tetrominos.setTheta(getRandomTheta());
+	
+	
+	//private static int getRandomTheta()
+	
+	//private static int getRandomLetter()
+	
+	public boolean checkBorder(Piece piece) {
+		return true;
+	}
+	
+	public void dropPiece() {
+		int newY = 2; //CHANGE, CHECK FOR STATIONARY PIECE BORDER
+		this.setCurrentY(newY);
+	}
+	
+	public void movePiece(int x) {
+		this.setCurrentX(this.getCurrentX() + x);
+	}
+	
+	public boolean pausePiece(Piece piece) {
+		return true;
+	}
+	
+	public boolean makeStationary(Piece piece) {
+		return true;
+	}
+}
